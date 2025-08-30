@@ -1,0 +1,133 @@
+/* 
+  Table of Contents
+
+  1. Defining Variables
+  2. Element Styles
+  3. Class Styles
+  3.1 Utility Classes
+  3.2 Component Classes
+  4. Idk
+*/
+
+/* Defining Variables */
+:root {
+  --color-white: white;
+  --color-primary: #123456;
+  --color-primary--dark: hsl(200, 100%, 20%);
+  --spacing: 1rem;
+  --spacing-one-and-a-half: calc(var(--spacing) * 1.5);
+  --spacing-double: calc(var(--spacing) * 2);
+  --spacing-triple: calc(var(--spacing) * 3);
+  --spacing-half: calc(var(--spacing) * 0.5);
+  --line-height: 1.8;
+  --line-height-small: 1.1;
+  --border-style: solid;
+  --border-size: 4px;
+  --border-color: var(--color-primary);
+  --border: var(--border-size) var(--border-style) var(--border-color);
+  --border-large: calc(var(--border-size) * 1.5) var(--border-style) var(--border-color);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Type Styling */
+body {
+  margin: 0;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: var(--line-height);
+}
+
+h1,
+h2,
+h3 {
+  font-style: bold;
+  line-height: var(--line-height-small);
+}
+
+header {
+  background-color: hsl(200, 100%, 20%);
+  color: white;
+  margin-top: auto;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+h1 {
+  padding: var(--spacing-one-and-a-half);
+  font-size: clamp(2rem, 8vw, 6rem);
+  margin-block: var(--spacing);
+  color: var(--color-white);
+  background-color: var(--color-primary--dark);
+}
+
+footer {
+  background: rgb(41, 44, 33);
+  color: white;
+  padding-block: var(--spacing-double);
+
+}
+
+header {
+  display: flex;
+  gap: var(--spacing);
+}
+
+header nav ul,
+footer nav ul {
+  display: flex;
+  gap: var(--spacing);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+footer nav ul {
+  justify-content: center;
+}
+
+/* Class Styling */
+
+/* Utility Classes */
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.padding-horizontal {
+  padding-inline: var(--spacing);
+}
+
+/* Component Classes */
+.quote {
+  background-color: #D3D3D3;
+  font-style: italic;
+  margin-block: var(--spacing-triple);
+  padding-inline: var(--spacing-one-and-a-half);
+  padding-block: var(--spacing);
+  border-inline-start: var(--border);
+}
+
+.author {
+  font-style: italic;
+}
+
+.bottom-menu {
+  /* text-align: center; */
+}
+
+/* Idk what to call ts */
+
+nav ul li a:link,
+nav ul li a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+
+
